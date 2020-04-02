@@ -28,6 +28,8 @@ jobs:
 
       - name: Build
         run: yarn build
+        env:
+          GITHUB_PAGES: true
 
       - name: Export
         run: yarn export
