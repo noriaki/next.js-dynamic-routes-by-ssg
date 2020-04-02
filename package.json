@@ -1,5 +1,5 @@
 {
-  "name": "next.js-dynamic-routes-by-ssg",
+  "name": "nextjs-dynamic-routes-by-ssg",
   "private": true,
   "engines": {
     "node": "12.x"
