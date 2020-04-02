@@ -1,17 +1,21 @@
 import React from 'react';
-import { NextPage } from 'next';
+import { NextPage, GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { customAlphabet } from 'nanoid/non-secure';
+import { customAlphabet } from 'nanoid/async';
 
 import styles from '../styles/ColorsPage.module.css';
 
 const nanoid = customAlphabet('1234567890abcdef', 6);
 
-const ColorsPage: NextPage = () => {
+interface Props {
+  color: string;
+};
+
+const ColorsPage: NextPage<Props> = ({ color }) => {
   const router = useRouter();
   const { slug } = router.query;
-  const color = nanoid();
+
   return (
     <div>
       <p>Welcome to Random color page!</p>
@@ -34,5 +38,23 @@ const ColorsPage: NextPage = () => {
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const color = await nanoid();
+  return {
+    props: {
+      color
+    },
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [
+      { params: { slug: 'ff0000' } },
+    ],
+    fallback: true,
+  };
+};
 
 export default ColorsPage;
