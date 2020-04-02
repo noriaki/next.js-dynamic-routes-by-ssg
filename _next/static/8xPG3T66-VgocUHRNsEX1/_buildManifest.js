@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = {"/[slug]":["static\u002Fcss\u002F87f9e006c623614d0e72.css"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
