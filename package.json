@@ -1,0 +1,36 @@
+{
+  "name": "next.js-dynamic-routes-by-ssg",
+  "private": true,
+  "engines": {
+    "node": "12.x"
+  },
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noriaki/next.js-dynamic-routes-by-ssg.git"
+  },
+  "keywords": [],
+  "author": "Noriaki Uchiyama <uchiyama.noriaki@gmail.com> (https://github.com/noriaki)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noriaki/next.js-dynamic-routes-by-ssg/issues"
+  },
+  "homepage": "https://github.com/noriaki/next.js-dynamic-routes-by-ssg#readme",
+  "dependencies": {
+    "nanoid": "^3.0.2",
+    "next": "^9.3.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.8",
+    "@types/react": "^16.9.31",
+    "typescript": "^3.8.3"
+  }
+}
