@@ -16,6 +16,10 @@ const ColorsPage: NextPage<Props> = ({ color }) => {
   const router = useRouter();
   const { slug } = router.query;
 
+  if (router.isFallback) {
+    color = '000000';
+  }
+
   return (
     <div>
       <p>Welcome to Random color page!</p>
